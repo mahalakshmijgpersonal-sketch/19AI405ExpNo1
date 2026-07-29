@@ -42,7 +42,7 @@
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
 
 <h3>Program</h3>
-```
+
 import random
 
 class MedicineAgent:
@@ -88,7 +88,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-  ```
+  
 
   <h3>OUTPUT</h3>
 
