@@ -42,27 +42,30 @@
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
 
 ### Program
-
+```
 import random
 
 class MedicineAgent:
     def __init__(self):
         self.location = "Room A"
         self.performance = 0
+
     def act(self, environment):
         temp = environment[self.location]["temperature"]
-    if temp > 98.5:
-            print(f"Patient in {self.location} unhealthy ({temp:.1f}°F). Giving medicine.")
+
+        if temp > 98.5:
+            print(f"Patient in {self.location} unhealthy ({temp:.1f}F). Giving medicine.")
             self.performance += 10
             environment[self.location]["temperature"] = 98.0
         else:
-            print(f"Patient in {self.location} healthy ({temp:.1f}°F).")
+            print(f"Patient in {self.location} healthy ({temp:.1f}F).")
 
         self.location = "Room B" if self.location == "Room A" else "Room A"
         self.performance -= 1
 
         print(f"Moving to {self.location}. Performance: {self.performance}")
         print("-" * 30)
+
 def main():
     environment = {
         "Room A": {"temperature": random.uniform(97.0, 102.0)},
@@ -83,9 +86,9 @@ def main():
 
     print("Simulation finished.")
 
-
 if __name__ == "__main__":
     main()
+```
 
   <h3>OUTPUT</h3>
 
