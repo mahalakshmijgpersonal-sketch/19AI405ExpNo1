@@ -88,8 +88,7 @@ def main():
     print("Simulation finished.")
 
 
-if __name__ == "__main__":
-    main()
+
 
   <h3>OUTPUT</h3>
 
